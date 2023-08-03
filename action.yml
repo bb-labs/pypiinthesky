@@ -1,0 +1,15 @@
+# action.yml
+name: "verpy"
+description: "Versioning action for pypi packages"
+branding:
+  icon: "thumbs-up"
+  color: "white"
+inputs:
+  package_name:
+    description: "Name of your pypi package. It can either exist, or be created anew, so long as you own the name."
+    required: true
+runs:
+  using: "docker"
+  image: "Dockerfile"
+  args:
+    - ${{ inputs.package_name }}
