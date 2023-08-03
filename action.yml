@@ -8,6 +8,12 @@ inputs:
   package_name:
     description: "Name of your pypi package. It can either exist, or be created anew, so long as you own the name."
     required: true
+  email:
+    description: "Your pypi/github email."
+    required: true
+  username:
+    description: "Your github username."
+    required: true
 runs:
   using: "docker"
   image: "Dockerfile"
