@@ -22,8 +22,10 @@ git commit -am 'fix[patch]: do a thing to fix a thing, release as a patch'
 ```
 
 ### Assumptions
-You folder structure has its package within a folder of the same name as the package, with a __version__ string defined in its __init__.py.
+You folder structure has its package within a folder of the same name as the package, with a `__version__` string defined in its `__init__.py`.
 
+```
 /root
   /awyes
     __init__.py # __version__ = '10.0.0'
+```
