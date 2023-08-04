@@ -1,5 +1,5 @@
 # action.yml
-name: "verpy"
+name: "vrpy"
 description: "Versioning action for pypi packages"
 branding:
   icon: "thumbs-up"
