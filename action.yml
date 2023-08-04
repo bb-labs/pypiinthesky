@@ -1,5 +1,5 @@
 # action.yml
-name: "vrpy"
+name: "pypiinthesky"
 description: "Versioning action for pypi packages"
 branding:
   icon: "thumbs-up"
