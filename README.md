@@ -17,8 +17,10 @@ Your github username.
 uses: bb-labs/verpy@main # or pin to latest major
 with:
   package_name: awyes
-  email: truman.purnell@gmail.com
-  username: trumanpurnell
+  gh_email: truman.purnell@gmail.com
+  gh_username: trumanpurnell
+  pypi_email: truman.purnell@gmail.com
+  pypi_password: apassy
 ```
 
 ### Example
@@ -31,7 +33,7 @@ git commit -am 'fix[patch]: do a thing to fix a thing, release as a patch'
 You folder structure has its package within a folder of the same name as the package, with a `__version__` string defined in its `__init__.py`.
 
 ```
-/rootgit stat
+/root
   /awyes
     __init__.py # __version__ = '10.0.0'
 ```
