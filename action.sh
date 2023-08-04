@@ -1,8 +1,10 @@
 #!/bin/bash
 
 package_name=$1
-email=$2
-username=$3
+pypi_email=$2
+pypi_password=$3
+gh_username=$4
+gh_email=$5
 
 pip3 install setuptools wheel pipenv twine semver
 commit_message=$(git log -1 --pretty=format:"%s")
@@ -30,7 +32,7 @@ case "$bump_type" in
   git push origin --tags
 
   python setup.py sdist bdist_wheel
-  twine upload dist/*
+  twine upload dist/* -u $pypi_email -p $pypi_password
   ;;
 *) ;;
 esac

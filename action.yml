@@ -26,3 +26,7 @@ runs:
   image: "Dockerfile"
   args:
     - ${{ inputs.package_name }}
+    - ${{ inputs.pypi_email }}
+    - ${{ inputs.pypi_password }}
+    - ${{ inputs.gh_username }}
+    - ${{ inputs.gh_email }}

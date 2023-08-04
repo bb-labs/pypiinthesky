@@ -1,4 +1,4 @@
-# pypiinthesky
+# verpy
 
 ## Action
 Versioning action for pypi packages. On commit, this action will version and release your pypi package.
@@ -7,10 +7,14 @@ Versioning action for pypi packages. On commit, this action will version and rel
 
 #### `package_name`
 Name of your pypi package. It can either exist, or be created anew, so long as you own the name.
-#### `email`
-Your pypi/github email.
-#### `username`
+#### `pypi_email`
+Your pypi email.
+#### `pypi_password`
+Your pypi password.
+#### `gh_username`
 Your github username.
+#### `hg_email`
+Your github email.
 
 ### Usage
 ```
