@@ -1,4 +1,4 @@
-# verpy
+# pypiinthesky
 
 ## Action
 Versioning action for pypi packages. On commit, this action will version and release your pypi package.
