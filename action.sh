@@ -6,7 +6,15 @@ pypi_password=$3
 gh_username=$4
 gh_email=$5
 
-echo "$@: all the vars"
+if [ -z $package_name ] || [ -z $pypi_email ] || [ -z $pypi_password ] || [ -z $gh_username ] || [ -z $gh_email ]; then
+  echo 'one or more variables are undefined: '
+  echo "package_name: $package_name"
+  echo "pypi_email: $pypi_email"
+  echo "pypi_password: $pypi_password"
+  echo "gh_username: $gh_username"
+  echo "gh_email: $gh_email"
+  exit 1
+fi
 
 git config --global --add safe.directory /github/workspace
 
