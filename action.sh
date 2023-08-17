@@ -18,6 +18,9 @@ fi
 
 git config --global --add safe.directory /github/workspace
 
+echo $(git config user.name)
+echo $(git config user.email)
+
 pip3 install setuptools wheel pipenv twine semver
 commit_message=$(git log -1 --pretty=format:"%s")
 bump_type=$(echo $commit_message | cut -d "[" -f2 | cut -d "]" -f1)
