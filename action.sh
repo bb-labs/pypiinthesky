@@ -6,6 +6,8 @@ pypi_password=$3
 gh_username=$4
 gh_email=$5
 
+git config --global --add safe.directory /github/workspace
+
 pip3 install setuptools wheel pipenv twine semver
 commit_message=$(git log -1 --pretty=format:"%s")
 bump_type=$(echo $commit_message | cut -d "[" -f2 | cut -d "]" -f1)
