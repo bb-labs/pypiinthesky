@@ -22,11 +22,11 @@ with:
   bump_type: patch
 ```
 
-You will be able to launch a release from your `Action`s tab in your github repository, provided you add this action in your repository's workflow.
+You will be able to launch a release from your `Actions` tab in your github repository, provided you add this action in your repository's workflow.
 
 ### Assumptions
 
-You folder structure has its package within a folder of the same name as the package, with a `__version__` string defined in its `__init__.py`.
+Your folder structure has its package within a folder of the same name as the package, with a `__version__` string defined in its `__init__.py`.
 
 ```
 /root
