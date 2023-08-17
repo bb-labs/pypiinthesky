@@ -18,7 +18,7 @@ Your github email.
 
 ### Usage
 ```
-uses: bb-labs/verpy@main # or pin to latest major
+uses: bb-labs/pypiinthesky@main # or pin to latest major
 with:
   package_name: awyes
   gh_email: truman.purnell@gmail.com
