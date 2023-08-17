@@ -20,6 +20,9 @@ inputs:
   gh_email:
     description: "Your github email."
     required: true
+  bump_type:
+    description: "The semver bump to apply: `major`, `minor`, `patch`."
+    required: true
 
 runs:
   using: "docker"
@@ -30,3 +33,4 @@ runs:
     - ${{ inputs.pypi_password }}
     - ${{ inputs.gh_username }}
     - ${{ inputs.gh_email }}
+    - ${{ inputs.bump_type }}
