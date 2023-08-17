@@ -2,20 +2,14 @@
 
 ## Action
 
-Versioning action for pypi packages. On commit, this action will version and release your pypi package.
+This action will version and release your pypi package.
 
 ### Inputs
 
 - #### `package_name`
-  Name of your pypi package. It can either exist, or be created anew, so long as you own the name.
 - #### `pypi_email`
-  Your pypi email.
 - #### `pypi_password`
-  Your pypi password.
-- #### `gh_username`
-  Your github username.
-- #### `hg_email`
-  Your github email.
+- #### `bump_type`
 
 ### Usage
 
@@ -23,19 +17,12 @@ Versioning action for pypi packages. On commit, this action will version and rel
 uses: bb-labs/pypiinthesky@main # or pin to latest major
 with:
   package_name: awyes
-  gh_email: truman.purnell@gmail.com
-  gh_username: trumanpurnell
   pypi_email: truman.purnell@gmail.com
   pypi_password: apassy
+  bump_type: patch
 ```
 
-### Example
-
-This will automatically cause your pypi package to release a new patch. You can place any semver bump within brackets anywhere in the commit message.
-
-```
-git commit -am 'fix[patch]: do a thing to fix a thing, release as a patch'
-```
+You will be able to launch a release from your `Action`s tab in your github repository, provided you add this action in your repository's workflow.
 
 ### Assumptions
 
