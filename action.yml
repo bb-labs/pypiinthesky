@@ -8,7 +8,7 @@ inputs:
   package_name:
     description: "Name of your pypi package. It can either exist, or be created anew, so long as you own the name."
     required: true
-  pypi_email:
+  pypi_username:
     description: "Your pypi email."
     required: true
   pypi_password:
@@ -23,6 +23,6 @@ runs:
   image: "Dockerfile"
   args:
     - ${{ inputs.package_name }}
-    - ${{ inputs.pypi_email }}
+    - ${{ inputs.pypi_username }}
     - ${{ inputs.pypi_password }}
     - ${{ inputs.bump_type }}
