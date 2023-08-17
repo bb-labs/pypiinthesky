@@ -3,15 +3,15 @@
 package_name=$1
 pypi_email=$2
 pypi_password=$3
-actor=$4
-bump_type=$5
+bump_type=$4
 
-if [ -z $package_name ] || [ -z $pypi_email ] || [ -z $pypi_password ] || [ -z $actor ] || [ -z $bump_type ]; then
+echo "$GITHUB_CONTEXT"
+
+if [ -z $package_name ] || [ -z $pypi_email ] || [ -z $pypi_password ] || [ -z $bump_type ]; then
   echo 'one or more variables are undefined: '
   echo "package_name: $package_name"
   echo "pypi_email: $pypi_email"
   echo "pypi_password: $pypi_password"
-  echo "gh_username: $actor"
   echo "bump_type: $bump_type"
   exit 1
 fi

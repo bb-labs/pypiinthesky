@@ -25,5 +25,4 @@ runs:
     - ${{ inputs.package_name }}
     - ${{ inputs.pypi_email }}
     - ${{ inputs.pypi_password }}
-    - ${{ github.actor }}
     - ${{ inputs.bump_type }}
