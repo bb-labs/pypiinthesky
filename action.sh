@@ -16,7 +16,7 @@ fi
 
 git config --global --add safe.directory /github/workspace
 
-pip3 install setuptools wheel pipenv twine semver
+pip3 install setuptools wheel pipenv twine semver build
 
 case "$bump_type" in
 "patch") ;&
@@ -40,7 +40,7 @@ case "$bump_type" in
   git push origin main
   git push origin --tags
 
-  python setup.py sdist bdist_wheel
+  python -m build --sdist --wheel
   twine upload --verbose dist/* -u $pypi_username -p $pypi_password
   ;;
 *) ;;
