@@ -6,6 +6,8 @@ pypi_password=$3
 gh_username=$4
 gh_email=$5
 
+echo "$@: all the vars"
+
 git config --global --add safe.directory /github/workspace
 
 pip3 install setuptools wheel pipenv twine semver
