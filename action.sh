@@ -5,7 +5,7 @@ pypi_email=$2
 pypi_password=$3
 bump_type=$4
 
-echo "$GITHUB_CONTEXT"
+echo "GITHUB ACTOR: $GITHUB_ACTOR"
 
 if [ -z $package_name ] || [ -z $pypi_email ] || [ -z $pypi_password ] || [ -z $bump_type ]; then
   echo 'one or more variables are undefined: '
@@ -33,7 +33,8 @@ case "$bump_type" in
   sed -i "s/__version__ = '$current_version'/__version__ = '$new_version'/" $package_name/__init__.py
   sed -i "s/__version__ = \"$current_version\"/__version__ = \"$new_version\"/" $package_name/__init__.py
 
-  git config user.name "$username"
+  git config --global user.email "noreply@example.com"
+
   git commit -am "[$bump_type]: $new_version"
   git tag $new_version
 
