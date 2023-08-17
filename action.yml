@@ -14,12 +14,6 @@ inputs:
   pypi_password:
     description: "Your pypi password."
     required: true
-  gh_username:
-    description: "Your github username."
-    required: true
-  gh_email:
-    description: "Your github email."
-    required: true
   bump_type:
     description: "The semver bump to apply: `major`, `minor`, `patch`."
     required: true
@@ -31,6 +25,5 @@ runs:
     - ${{ inputs.package_name }}
     - ${{ inputs.pypi_email }}
     - ${{ inputs.pypi_password }}
-    - ${{ inputs.gh_username }}
-    - ${{ inputs.gh_email }}
+    - ${{ github.actor }}
     - ${{ inputs.bump_type }}
