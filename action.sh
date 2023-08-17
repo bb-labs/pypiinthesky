@@ -41,7 +41,7 @@ case "$bump_type" in
   git push origin --tags
 
   python setup.py sdist bdist_wheel
-  twine upload dist/* -u $pypi_email -p $pypi_password
+  twine upload --verbose dist/* -u $pypi_email -p $pypi_password
   ;;
 *) ;;
 esac
